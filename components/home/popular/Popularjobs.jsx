@@ -1,4 +1,4 @@
-import React, {useState}from 'react'
+import {useState}from 'react'
 import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
 import { COLORS, SIZES } from '../../../constants'
@@ -43,7 +43,7 @@ const Popularjobs = () => {
             selectedJob={selectedJob}
             handleCardPress={handleCardPress}/>
           )} 
-          keyExtractor={item => item?.job_id}
+          keyExtractor={(item) => item.job_id}
           contentContainerStyle= {{columnGap: SIZES.medium}}
           horizontal/>
         )}
